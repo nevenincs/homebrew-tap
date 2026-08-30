@@ -1,7 +1,7 @@
 class VaultspecCore < Formula
   desc "Spec-driven development framework - vaultspec-core CLI and MCP server"
   homepage "https://github.com/nevenincs/vaultspec-core"
-  version "0.1.62"
+  version "0.1.63"
   license "MIT"
 
   livecheck do
@@ -12,34 +12,34 @@ class VaultspecCore < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.62/vaultspec-core-aarch64-apple-darwin"
-      sha256 "8137ff715597585901e41e5ba5852bafe2d2d979fff444f91bfdd7187df9809f"
+      url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.63/vaultspec-core-aarch64-apple-darwin"
+      sha256 "29d605eee14c435bd2103e8f098dca1a65853686a1ece3bbc6e75c56531cbc25"
 
       resource "vaultspec-mcp" do
-        url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.62/vaultspec-mcp-aarch64-apple-darwin"
-        sha256 "99919f9ac6ec2ad55cefb979424abd9e84a9c93601ec2c72aaa5c23b169a8ace"
+        url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.63/vaultspec-mcp-aarch64-apple-darwin"
+        sha256 "7b5a150ad287eb01fbb1675fe9c6e86d2b9dabaabc17e8477cc01a2ff5fb8006"
       end
     end
 
     on_intel do
-      url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.62/vaultspec-core-x86_64-apple-darwin"
-      sha256 "ce5f4118233c60252515d4e384a690e921ee2ca3ffbdd29bf60a061ac96e269f"
+      url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.63/vaultspec-core-x86_64-apple-darwin"
+      sha256 "defe90cf01671bdb5006c1064bd0067b7ba28e7bf7c07cf43f97c39704e35a2b"
 
       resource "vaultspec-mcp" do
-        url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.62/vaultspec-mcp-x86_64-apple-darwin"
-        sha256 "3e2afd077c1cc78bae2574b43151715b45bf1a10ad0d7e38318086fa7004cadd"
+        url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.63/vaultspec-mcp-x86_64-apple-darwin"
+        sha256 "61f3d7ef609cbda65e71fe66367bb7557d7b2c7df6247d33a48c22654a13752b"
       end
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.62/vaultspec-core-x86_64-unknown-linux-gnu"
-      sha256 "910cb7887c31ec6ab1f1860af043a8fa9c648e6bbb2f9a82694976ac1149c9b5"
+      url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.63/vaultspec-core-x86_64-unknown-linux-gnu"
+      sha256 "11575f780a4195fb96938221cafa76f5311df9f4dde54a258be07cac97967e29"
 
       resource "vaultspec-mcp" do
-        url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.62/vaultspec-mcp-x86_64-unknown-linux-gnu"
-        sha256 "264f6c44c687e580d55e37c9dd39fdfe9c69d204405838caba1476d684c078b9"
+        url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.63/vaultspec-mcp-x86_64-unknown-linux-gnu"
+        sha256 "44458b645ee9f1c837483bea5a0ed01c9f213b9751dac2d83e1bee62f7fe877b"
       end
     end
   end
