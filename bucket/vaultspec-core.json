@@ -1,15 +1,15 @@
 {
-  "version": "0.1.72",
+  "version": "0.1.73",
   "description": "Spec-driven development framework - vaultspec-core CLI and MCP server",
   "homepage": "https://github.com/nevenincs/vaultspec-core",
   "license": "MIT",
   "url": [
-    "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.72/vaultspec-core-x86_64-pc-windows-msvc.exe",
-    "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.72/vaultspec-mcp-x86_64-pc-windows-msvc.exe"
+    "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.73/vaultspec-core-x86_64-pc-windows-msvc.exe",
+    "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.73/vaultspec-mcp-x86_64-pc-windows-msvc.exe"
   ],
   "hash": [
-    "cec51ff961be6b7de2ff03b1cc02c0cc56b191e5e22d922431589450b107e0d1",
-    "eabfb749fa44fdba996e39dfff845c875d12b297ab0e83887bc4fa80dbada3cd"
+    "63c9f1b33c992a5578ec734a32e484e3aa013624b5ed24d3ed953fa1167e1ee6",
+    "310f1bcdc7ad19a3dbbc8c8544978824eb647872e3d0c28ad24e8729d87d7c4e"
   ],
   "bin": [
     [

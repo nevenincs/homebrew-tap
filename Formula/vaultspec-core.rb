@@ -1,7 +1,7 @@
 class VaultspecCore < Formula
   desc "Spec-driven development framework - vaultspec-core CLI and MCP server"
   homepage "https://github.com/nevenincs/vaultspec-core"
-  version "0.1.72"
+  version "0.1.73"
   license "MIT"
 
   livecheck do
@@ -12,34 +12,34 @@ class VaultspecCore < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.72/vaultspec-core-aarch64-apple-darwin"
-      sha256 "4fd9739cc013f4bf6bf31a5eda075d5d73a039166429799dbc9b6b04284a855e"
+      url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.73/vaultspec-core-aarch64-apple-darwin"
+      sha256 "582e93d84e21de094c176cfd2f02b79093b8012c663942e8f35e03fff90c8a99"
 
       resource "vaultspec-mcp" do
-        url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.72/vaultspec-mcp-aarch64-apple-darwin"
-        sha256 "f8b0e15d47c59462b25c945dfbb7d9b4d449eba99921cf36689d9cc8bbc0da34"
+        url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.73/vaultspec-mcp-aarch64-apple-darwin"
+        sha256 "de8b254bfc8f33bd27e903cbc84f64de399230cd4b425c757607aad8d2059c36"
       end
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.72/vaultspec-core-x86_64-unknown-linux-gnu"
-      sha256 "3fe039ebbb84f76dc14cfd7ef2b8d5229db0bcd4acd0eaeb72b07a2cbd0e1979"
+      url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.73/vaultspec-core-x86_64-unknown-linux-gnu"
+      sha256 "420196472f4c41611cfdf88dbaac438508ac5da413f927766db71cc68127e15f"
 
       resource "vaultspec-mcp" do
-        url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.72/vaultspec-mcp-x86_64-unknown-linux-gnu"
-        sha256 "da8503027ccb11069b37b51a2c1f6f2fb0751bf6a281cda2c13cf674c969f721"
+        url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.73/vaultspec-mcp-x86_64-unknown-linux-gnu"
+        sha256 "41061a18c52bbe0d3c27b5e1d6266c7c6b7a2da62c29535001c7468e95cea881"
       end
     end
 
     on_arm do
-      url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.72/vaultspec-core-aarch64-unknown-linux-gnu"
-      sha256 "f3bde995f358e1646ae65fac2af51f10b37caa095060463d07c2df922b997355"
+      url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.73/vaultspec-core-aarch64-unknown-linux-gnu"
+      sha256 "2b8699024d927682898cc6ad62f5f94da4afff42c9f564b5506d3fc9dbc44797"
 
       resource "vaultspec-mcp" do
-        url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.72/vaultspec-mcp-aarch64-unknown-linux-gnu"
-        sha256 "111958bf9202d9740c82390a7a607294c27be8b1b4f6e44f9e556bcc802ee30f"
+        url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.73/vaultspec-mcp-aarch64-unknown-linux-gnu"
+        sha256 "5f014e3a761460b6dc2452f979075125426a9c3a43f548d9258e52d4089aca45"
       end
     end
   end
