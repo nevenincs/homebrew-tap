@@ -1,0 +1,43 @@
+{
+  "version": "0.1.62",
+  "description": "Spec-driven development framework - vaultspec-core CLI and MCP server",
+  "homepage": "https://github.com/nevenincs/vaultspec-core",
+  "license": "MIT",
+  "url": [
+    "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.62/vaultspec-core-x86_64-pc-windows-msvc.exe",
+    "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.62/vaultspec-mcp-x86_64-pc-windows-msvc.exe"
+  ],
+  "hash": [
+    "c7767b35c4740b36f832064471d64b094ab273852b46c67ed44414382fa91ede",
+    "d316bbc906348b79b1644f3dff14363df0e1bfa8626ed7f488ec0871cd902ca4"
+  ],
+  "bin": [
+    [
+      "vaultspec-core-x86_64-pc-windows-msvc.exe",
+      "vaultspec-core"
+    ],
+    [
+      "vaultspec-mcp-x86_64-pc-windows-msvc.exe",
+      "vaultspec-mcp"
+    ]
+  ],
+  "checkver": {
+    "github": "https://github.com/nevenincs/vaultspec-core",
+    "regex": "vaultspec-core-v([\\d.]+)"
+  },
+  "autoupdate": {
+    "url": [
+      "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v$version/vaultspec-core-x86_64-pc-windows-msvc.exe",
+      "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v$version/vaultspec-mcp-x86_64-pc-windows-msvc.exe"
+    ],
+    "hash": {
+      "url": "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v$version/SHA256SUMS",
+      "regex": "$sha256\\s+$basename"
+    }
+  },
+  "notes": [
+    "Installs vaultspec-core and vaultspec-mcp.",
+    "First launch bootstraps the pinned runtime; needs network once.",
+    "Verify with: vaultspec-core --version"
+  ]
+}
