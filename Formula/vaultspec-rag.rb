@@ -1,7 +1,7 @@
 class VaultspecRag < Formula
   desc "Hybrid dense and sparse semantic search for your docs and source code"
   homepage "https://github.com/nevenincs/vaultspec-rag"
-  version "0.4.21"
+  version "0.4.22"
   license "MIT"
 
   livecheck do
@@ -12,22 +12,22 @@ class VaultspecRag < Formula
 
   on_linux do
     on_intel do
-      url "https://github.com/nevenincs/vaultspec-rag/releases/download/vaultspec-rag-v0.4.21/vaultspec-rag-x86_64-unknown-linux-gnu"
-      sha256 "45738c18cc07eb9cb04f0d1d3677a51992ac7dc072d3040cf34c9117bba34836"
+      url "https://github.com/nevenincs/vaultspec-rag/releases/download/vaultspec-rag-v0.4.22/vaultspec-rag-x86_64-unknown-linux-gnu"
+      sha256 "29a13eda2a44697659e347140123a046ad76eb8b4c809a27aa0fb7d9d3d96162"
 
       resource "vaultspec-search-mcp" do
-        url "https://github.com/nevenincs/vaultspec-rag/releases/download/vaultspec-rag-v0.4.21/vaultspec-search-mcp-x86_64-unknown-linux-gnu"
-        sha256 "e6b6937a62c8ea71a17819781a5d4b0ff58fabef31607067b3ce89325f44089d"
+        url "https://github.com/nevenincs/vaultspec-rag/releases/download/vaultspec-rag-v0.4.22/vaultspec-search-mcp-x86_64-unknown-linux-gnu"
+        sha256 "158c1f81858eff7f289031d87d93afc3a6365b44e9278372b27422969d0040f8"
       end
     end
 
     on_arm do
-      url "https://github.com/nevenincs/vaultspec-rag/releases/download/vaultspec-rag-v0.4.21/vaultspec-rag-aarch64-unknown-linux-gnu"
-      sha256 "6ec7d8d87abff7fe2db0a162ac22a7dafdd51eafa4dcf4c12e2cdbb190b98234"
+      url "https://github.com/nevenincs/vaultspec-rag/releases/download/vaultspec-rag-v0.4.22/vaultspec-rag-aarch64-unknown-linux-gnu"
+      sha256 "054a7de040e12f5b86b0da13964750248278617acea17a719d20b44625b4f37a"
 
       resource "vaultspec-search-mcp" do
-        url "https://github.com/nevenincs/vaultspec-rag/releases/download/vaultspec-rag-v0.4.21/vaultspec-search-mcp-aarch64-unknown-linux-gnu"
-        sha256 "ca58517c85b3a8dc37a23352f9d91e0a9d63f98afec137cff9e954beb795a55d"
+        url "https://github.com/nevenincs/vaultspec-rag/releases/download/vaultspec-rag-v0.4.22/vaultspec-search-mcp-aarch64-unknown-linux-gnu"
+        sha256 "64cc5a10d6ea43f4017c402c2558d0b7deee324caa07aa219a2bb698067eb9db"
       end
     end
   end
