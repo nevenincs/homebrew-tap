@@ -1,5 +1,5 @@
 class VaultspecCore < Formula
-  desc "Spec-driven development framework - vaultspec-core CLI and MCP server"
+  desc "Decision-driven harness for coding agents, and humans."
   homepage "https://github.com/nevenincs/vaultspec-core"
   version "0.1.73"
   license "MIT"
@@ -59,7 +59,7 @@ class VaultspecCore < Formula
   def caveats
     <<~EOS
       Installs vaultspec-core and vaultspec-mcp.
-      First launch bootstraps the pinned runtime; needs network once.
+      First launch needs network access to install the pinned package and its dependencies.
       Verify with: vaultspec-core --version
     EOS
   end
