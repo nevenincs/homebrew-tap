@@ -1,15 +1,15 @@
 {
-  "version": "0.1.73",
+  "version": "0.2.0",
   "description": "Decision-driven harness for coding agents, and humans.",
   "homepage": "https://github.com/nevenincs/vaultspec-core",
   "license": "MIT",
   "url": [
-    "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.73/vaultspec-core-x86_64-pc-windows-msvc.exe",
-    "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.73/vaultspec-mcp-x86_64-pc-windows-msvc.exe"
+    "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.2.0/vaultspec-core-x86_64-pc-windows-msvc.exe",
+    "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.2.0/vaultspec-mcp-x86_64-pc-windows-msvc.exe"
   ],
   "hash": [
-    "63c9f1b33c992a5578ec734a32e484e3aa013624b5ed24d3ed953fa1167e1ee6",
-    "310f1bcdc7ad19a3dbbc8c8544978824eb647872e3d0c28ad24e8729d87d7c4e"
+    "97e105f1692b1679fcd2ee27dde7f4ae70d78e314307117f8fa8f8b273a67519",
+    "45c17897fa275abd1dcd537cf28294f71a95df1fa27c9a1303f49bfcbab419ab"
   ],
   "bin": [
     [
@@ -37,7 +37,8 @@
   },
   "notes": [
     "Installs vaultspec-core and vaultspec-mcp.",
-    "First launch needs network access to install the pinned package and its dependencies.",
+    "Each binary carries its own Python, Vaultspec and every dependency, so no launch needs a network.",
+    "Upgrade through this channel: the binaries do not update themselves.",
     "Verify with: vaultspec-core --version"
   ]
 }

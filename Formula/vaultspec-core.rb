@@ -1,7 +1,7 @@
 class VaultspecCore < Formula
   desc "Decision-driven harness for coding agents, and humans."
   homepage "https://github.com/nevenincs/vaultspec-core"
-  version "0.1.73"
+  version "0.2.0"
   license "MIT"
 
   livecheck do
@@ -12,34 +12,24 @@ class VaultspecCore < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.73/vaultspec-core-aarch64-apple-darwin"
-      sha256 "582e93d84e21de094c176cfd2f02b79093b8012c663942e8f35e03fff90c8a99"
+      url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.2.0/vaultspec-core-aarch64-apple-darwin"
+      sha256 "eab820a34f72ed40c4858c7d29626d8dd303647db800d3f82fdb32f7cac08ee4"
 
       resource "vaultspec-mcp" do
-        url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.73/vaultspec-mcp-aarch64-apple-darwin"
-        sha256 "de8b254bfc8f33bd27e903cbc84f64de399230cd4b425c757607aad8d2059c36"
+        url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.2.0/vaultspec-mcp-aarch64-apple-darwin"
+        sha256 "7678bc13d1785f6844e0aabc268eea5aeb9cf6224eece9347d6ee486a843c12c"
       end
     end
   end
 
   on_linux do
-    on_intel do
-      url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.73/vaultspec-core-x86_64-unknown-linux-gnu"
-      sha256 "420196472f4c41611cfdf88dbaac438508ac5da413f927766db71cc68127e15f"
-
-      resource "vaultspec-mcp" do
-        url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.73/vaultspec-mcp-x86_64-unknown-linux-gnu"
-        sha256 "41061a18c52bbe0d3c27b5e1d6266c7c6b7a2da62c29535001c7468e95cea881"
-      end
-    end
-
     on_arm do
-      url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.73/vaultspec-core-aarch64-unknown-linux-gnu"
-      sha256 "2b8699024d927682898cc6ad62f5f94da4afff42c9f564b5506d3fc9dbc44797"
+      url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.2.0/vaultspec-core-aarch64-unknown-linux-gnu"
+      sha256 "6ecfe277403eb23942df81c479cf2bf9227e419f9d5fb760fc47b6261a1aeb14"
 
       resource "vaultspec-mcp" do
-        url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.1.73/vaultspec-mcp-aarch64-unknown-linux-gnu"
-        sha256 "5f014e3a761460b6dc2452f979075125426a9c3a43f548d9258e52d4089aca45"
+        url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.2.0/vaultspec-mcp-aarch64-unknown-linux-gnu"
+        sha256 "aece5a04a771de26a3de661de4e9ea789ebfc5282e3b23287595d95cd71674f4"
       end
     end
   end
@@ -59,7 +49,8 @@ class VaultspecCore < Formula
   def caveats
     <<~EOS
       Installs vaultspec-core and vaultspec-mcp.
-      First launch needs network access to install the pinned package and its dependencies.
+      Each binary carries its own Python, Vaultspec and every dependency, so no launch needs a network.
+      Upgrade through this channel: the binaries do not update themselves.
       Verify with: vaultspec-core --version
     EOS
   end
