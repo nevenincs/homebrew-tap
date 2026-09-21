@@ -1,24 +1,22 @@
 {
-  "version": "0.2.0",
+  "version": "0.2.4",
   "description": "Decision-driven harness for coding agents, and humans.",
   "homepage": "https://github.com/nevenincs/vaultspec-core",
   "license": "MIT",
   "url": [
-    "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.2.0/vaultspec-core-x86_64-pc-windows-msvc.exe",
-    "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.2.0/vaultspec-mcp-x86_64-pc-windows-msvc.exe"
+    "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.2.4/vaultspec-core-v0.2.4-x86_64-pc-windows-msvc.zip"
   ],
   "hash": [
-    "97e105f1692b1679fcd2ee27dde7f4ae70d78e314307117f8fa8f8b273a67519",
-    "45c17897fa275abd1dcd537cf28294f71a95df1fa27c9a1303f49bfcbab419ab"
+    "f46a52ea4a7e1a9c0f41cde852a3ee973c52bdf44dc3b2bc8f3a210b692253eb"
   ],
   "bin": [
     [
-      "vaultspec-core-x86_64-pc-windows-msvc.exe",
+      "vaultspec-core.exe",
       "vaultspec-core"
     ],
     [
-      "vaultspec-mcp-x86_64-pc-windows-msvc.exe",
-      "vaultspec-mcp"
+      "vaultspec-core-mcp.exe",
+      "vaultspec-core-mcp"
     ]
   ],
   "checkver": {
@@ -27,8 +25,7 @@
   },
   "autoupdate": {
     "url": [
-      "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v$version/vaultspec-core-x86_64-pc-windows-msvc.exe",
-      "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v$version/vaultspec-mcp-x86_64-pc-windows-msvc.exe"
+      "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v$version/vaultspec-core-v$version-x86_64-pc-windows-msvc.zip"
     ],
     "hash": {
       "url": "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v$version/SHA256SUMS",
@@ -36,7 +33,7 @@
     }
   },
   "notes": [
-    "Installs vaultspec-core and vaultspec-mcp.",
+    "Installs vaultspec-core and vaultspec-core-mcp.",
     "Each binary carries its own Python, Vaultspec and every dependency, so no launch needs a network.",
     "Upgrade through this channel: the binaries do not update themselves.",
     "Verify with: vaultspec-core --version"

@@ -1,7 +1,7 @@
 class VaultspecCore < Formula
   desc "Decision-driven harness for coding agents, and humans."
   homepage "https://github.com/nevenincs/vaultspec-core"
-  version "0.2.0"
+  version "0.2.4"
   license "MIT"
 
   livecheck do
@@ -12,43 +12,31 @@ class VaultspecCore < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.2.0/vaultspec-core-aarch64-apple-darwin"
-      sha256 "eab820a34f72ed40c4858c7d29626d8dd303647db800d3f82fdb32f7cac08ee4"
-
-      resource "vaultspec-mcp" do
-        url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.2.0/vaultspec-mcp-aarch64-apple-darwin"
-        sha256 "7678bc13d1785f6844e0aabc268eea5aeb9cf6224eece9347d6ee486a843c12c"
-      end
+      url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.2.4/vaultspec-core-v0.2.4-aarch64-apple-darwin.tar.gz"
+      sha256 "094fbacc825f4a059cd61e7951c9b04740617c52f73961a0dfc08101b1f73f43"
     end
   end
 
   on_linux do
-    on_arm do
-      url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.2.0/vaultspec-core-aarch64-unknown-linux-gnu"
-      sha256 "6ecfe277403eb23942df81c479cf2bf9227e419f9d5fb760fc47b6261a1aeb14"
+    on_intel do
+      url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.2.4/vaultspec-core-v0.2.4-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "3349944123e6f0dc96906780f646150292819e17f9afdfb49ad69f315866fca2"
+    end
 
-      resource "vaultspec-mcp" do
-        url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.2.0/vaultspec-mcp-aarch64-unknown-linux-gnu"
-        sha256 "aece5a04a771de26a3de661de4e9ea789ebfc5282e3b23287595d95cd71674f4"
-      end
+    on_arm do
+      url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.2.4/vaultspec-core-v0.2.4-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "4f60c0b6a1957cb55d6b40319e187060b7f37bbcb11d2c9bdcb9cf13f8ad7635"
     end
   end
 
   def install
-    vendor = OS.mac? ? "apple-darwin" : "unknown-linux-gnu"
-    arch = Hardware::CPU.arm? ? "aarch64" : "x86_64"
-    triple = "#{arch}-#{vendor}"
-
-    bin.install "vaultspec-core-#{triple}" => "vaultspec-core"
-
-    resource("vaultspec-mcp").stage do
-      bin.install "vaultspec-mcp-#{triple}" => "vaultspec-mcp"
-    end
+    bin.install "vaultspec-core"
+    bin.install "vaultspec-core-mcp"
   end
 
   def caveats
     <<~EOS
-      Installs vaultspec-core and vaultspec-mcp.
+      Installs vaultspec-core and vaultspec-core-mcp.
       Each binary carries its own Python, Vaultspec and every dependency, so no launch needs a network.
       Upgrade through this channel: the binaries do not update themselves.
       Verify with: vaultspec-core --version
