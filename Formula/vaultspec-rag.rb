@@ -1,7 +1,7 @@
 class VaultspecRag < Formula
   desc "Hybrid dense and sparse semantic search for your docs and source code"
   homepage "https://github.com/nevenincs/vaultspec-rag"
-  version "0.4.24"
+  version "0.4.35"
   license "MIT"
 
   livecheck do
@@ -10,47 +10,37 @@ class VaultspecRag < Formula
     strategy :github_latest
   end
 
+  on_macos do
+    on_arm do
+      url "https://github.com/nevenincs/vaultspec-rag/releases/download/vaultspec-rag-v0.4.35/vaultspec-rag-v0.4.35-aarch64-apple-darwin.tar.gz"
+      sha256 "07e16ad120cbf4ba5a0a80cddab634f84edf9ee2100725d44976394d6f227546"
+    end
+  end
+
   on_linux do
     on_intel do
-      url "https://github.com/nevenincs/vaultspec-rag/releases/download/vaultspec-rag-v0.4.24/vaultspec-rag-x86_64-unknown-linux-gnu"
-      sha256 "4b8a02f9912cda8d41d8500dbe4bd2a64c3b01400f866e6c52f184a7cf51a7e8"
-
-      resource "vaultspec-search-mcp" do
-        url "https://github.com/nevenincs/vaultspec-rag/releases/download/vaultspec-rag-v0.4.24/vaultspec-search-mcp-x86_64-unknown-linux-gnu"
-        sha256 "c81741c55da58e9d2d57d8d2fc972ec8af97ae28a222e457d0635a18de021dd0"
-      end
+      url "https://github.com/nevenincs/vaultspec-rag/releases/download/vaultspec-rag-v0.4.35/vaultspec-rag-v0.4.35-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "e04069e6677e4b39eee9197d107ccf434d40917d6daab31b8b4e3a37e4997794"
     end
 
     on_arm do
-      url "https://github.com/nevenincs/vaultspec-rag/releases/download/vaultspec-rag-v0.4.24/vaultspec-rag-aarch64-unknown-linux-gnu"
-      sha256 "9429a0914f3e1342faf350339794979f568b5bbbded5596081b04b3fd194c54c"
-
-      resource "vaultspec-search-mcp" do
-        url "https://github.com/nevenincs/vaultspec-rag/releases/download/vaultspec-rag-v0.4.24/vaultspec-search-mcp-aarch64-unknown-linux-gnu"
-        sha256 "6e5daa4ef9b84de9c52d82395ba6e410d802c36d68ae936a782f9730e761fb73"
-      end
+      url "https://github.com/nevenincs/vaultspec-rag/releases/download/vaultspec-rag-v0.4.35/vaultspec-rag-v0.4.35-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "84e04920742678bd2d04baadb4474e7519f3da2d538512979de710534328e9b2"
     end
   end
 
   def install
-    vendor = OS.mac? ? "apple-darwin" : "unknown-linux-gnu"
-    arch = Hardware::CPU.arm? ? "aarch64" : "x86_64"
-    triple = "#{arch}-#{vendor}"
-
-    bin.install "vaultspec-rag-#{triple}" => "vaultspec-rag"
-
-    resource("vaultspec-search-mcp").stage do
-      bin.install "vaultspec-search-mcp-#{triple}" => "vaultspec-search-mcp"
-    end
+    bin.install "vaultspec-rag"
+    bin.install "vaultspec-search-mcp"
   end
 
   def caveats
     <<~EOS
-      Requires an NVIDIA GPU with a working CUDA driver; there is no CPU mode.
-      First launch downloads the CUDA runtime; needs network once, and space.
+      Requires an NVIDIA GPU with CUDA, or Apple silicon; there is no CPU mode.
+      First launch downloads the accelerator runtime; needs network and space.
       Same GPU torch build uv installs, pinned from this project's lock.
       Verify with: vaultspec-rag --version
-      Linux builds require glibc 2.28 or newer.
+      Linux builds require glibc 2.39 or newer.
     EOS
   end
 
