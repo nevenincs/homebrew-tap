@@ -1,13 +1,13 @@
 {
-  "version": "0.5.3",
+  "version": "0.6.0",
   "description": "Hybrid dense and sparse semantic search for your docs and source code",
   "homepage": "https://github.com/nevenincs/vaultspec-rag",
   "license": "MIT",
   "url": [
-    "https://github.com/nevenincs/vaultspec-rag/releases/download/vaultspec-rag-v0.5.3/vaultspec-rag-v0.5.3-x86_64-pc-windows-msvc.zip"
+    "https://github.com/nevenincs/vaultspec-rag/releases/download/vaultspec-rag-v0.6.0/vaultspec-rag-v0.6.0-x86_64-pc-windows-msvc.zip"
   ],
   "hash": [
-    "aa97c514fca5116cfe257bf33924fb14b4f270975927c3cad73f3f5748cb95c1"
+    "dcf0f126866aa062de82e95194151bba769aa2e7bb86fe05707eb410f7e38018"
   ],
   "bin": [
     [
@@ -17,6 +17,10 @@
     [
       "vaultspec-search-mcp.exe",
       "vaultspec-search-mcp"
+    ],
+    [
+      "vaultspec-rag-monitor.exe",
+      "vaultspec-rag-monitor"
     ]
   ],
   "checkver": {
@@ -33,9 +37,11 @@
     }
   },
   "notes": [
-    "Requires an NVIDIA GPU with CUDA, or Apple silicon; there is no CPU mode.",
-    "First launch downloads the accelerator runtime; needs network and space.",
-    "Same GPU torch build uv installs, pinned from this project's lock.",
-    "Verify with: vaultspec-rag --version"
+    "RAG backend requires NVIDIA CUDA or Apple silicon; there is no CPU mode.",
+    "RAG commands download their runtime on first launch; need network and space.",
+    "Monitor starts offline without Python, Node, Bun or an accelerator.",
+    "Backend control needs the sibling RAG command or the daemon's Python runtime.",
+    "Verify with: vaultspec-rag --version",
+    "Verify with: vaultspec-rag-monitor --version"
   ]
 }
