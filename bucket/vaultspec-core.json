@@ -1,13 +1,13 @@
 {
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Decision-driven harness for coding agents, and humans.",
   "homepage": "https://github.com/nevenincs/vaultspec-core",
   "license": "MIT",
   "url": [
-    "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.3.4/vaultspec-core-v0.3.4-x86_64-pc-windows-msvc.zip"
+    "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.3.5/vaultspec-core-v0.3.5-x86_64-pc-windows-msvc.zip"
   ],
   "hash": [
-    "bb3d117283c82fd805ef6cc49464ece730d261051e575e01e6b29fa33ebcbe28"
+    "9b6731ba1e76e776b8b3b44b93060215f68921702fb637a21b002c193903dc16"
   ],
   "bin": [
     [
