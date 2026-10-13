@@ -1,7 +1,7 @@
 class VaultspecCore < Formula
   desc "Decision-driven harness for coding agents, and humans."
   homepage "https://github.com/nevenincs/vaultspec-core"
-  version "0.3.5"
+  version "0.3.7"
   license "MIT"
 
   livecheck do
@@ -12,20 +12,20 @@ class VaultspecCore < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.3.5/vaultspec-core-v0.3.5-aarch64-apple-darwin.tar.gz"
-      sha256 "99c14a505da07f89af2a8e92e81239af353268d13311588ca993d77863fbb938"
+      url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.3.7/vaultspec-core-v0.3.7-aarch64-apple-darwin.tar.gz"
+      sha256 "3587227c933b7861800a0e348bde5fac3a5c5624d95f73decebb58ad197bff73"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.3.5/vaultspec-core-v0.3.5-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "bd0613c701f174eac6e4d76deaba2328984bd8cc48216ff7ad591a910555ec37"
+      url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.3.7/vaultspec-core-v0.3.7-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "e1572b95bac917d988b7bfbeacac83abe300da541545afdf329a4f0d0377bdfa"
     end
 
     on_arm do
-      url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.3.5/vaultspec-core-v0.3.5-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "93d05924dcd866f563f7100850334d71a7d6800e911d224914c7b060ab4a46b7"
+      url "https://github.com/nevenincs/vaultspec-core/releases/download/vaultspec-core-v0.3.7/vaultspec-core-v0.3.7-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "06640c1937844d00250d47c52b9b3e079ff604be8afe6071685ad065bdd64c8f"
     end
   end
 
