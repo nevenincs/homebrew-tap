@@ -1,7 +1,7 @@
 class VaultspecRag < Formula
   desc "Hybrid dense and sparse semantic search for your docs and source code"
   homepage "https://github.com/nevenincs/vaultspec-rag"
-  version "0.6.0"
+  version "0.6.9"
   license "MIT"
 
   livecheck do
@@ -12,20 +12,20 @@ class VaultspecRag < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/nevenincs/vaultspec-rag/releases/download/vaultspec-rag-v0.6.0/vaultspec-rag-v0.6.0-aarch64-apple-darwin.tar.gz"
-      sha256 "d11e496f84348298fea6185e79abe4cc6fd970d9c8316176b8e895703ddfd9b0"
+      url "https://github.com/nevenincs/vaultspec-rag/releases/download/vaultspec-rag-v0.6.9/vaultspec-rag-v0.6.9-aarch64-apple-darwin.tar.gz"
+      sha256 "4db39e046075a5f709510c8b63fb1c9bd00f334ebb3d1eb63c394632f7e745a0"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/nevenincs/vaultspec-rag/releases/download/vaultspec-rag-v0.6.0/vaultspec-rag-v0.6.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "7337a02ea6a32efe5d27f0774fda355263a97b171f51253b9114d2b77b3f9d99"
+      url "https://github.com/nevenincs/vaultspec-rag/releases/download/vaultspec-rag-v0.6.9/vaultspec-rag-v0.6.9-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "d0c967f7fc82f2e19cb9186c763278552817ad9f39bf7a7d9597d5137adf04f2"
     end
 
     on_arm do
-      url "https://github.com/nevenincs/vaultspec-rag/releases/download/vaultspec-rag-v0.6.0/vaultspec-rag-v0.6.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "72c20c7805e6b23fb29190838f167538fe95ddd2d09f137165f4d17ba85a3d99"
+      url "https://github.com/nevenincs/vaultspec-rag/releases/download/vaultspec-rag-v0.6.9/vaultspec-rag-v0.6.9-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "2345797d93a680f21035194afdaefb26978bdf7864c557c67c3ce18bbcd87164"
     end
   end
 
